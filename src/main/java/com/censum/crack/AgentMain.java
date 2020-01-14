@@ -25,7 +25,9 @@ public class AgentMain {
         @Override
         protected void onMethodEnter() {
             // 强行插入 return CanLoadState.SUCCESS;
-            mv.visitFieldInsn(GETSTATIC, "com/jclarity/censum/CanLoadState", "SUCCESS", "Lcom/jclarity/censum/CanLoadState;");
+            mv.visitFieldInsn(GETSTATIC, "com/jclarity/censum/CanLoadState",
+                    "SUCCESS",
+                    "Lcom/jclarity/censum/CanLoadState;");
             mv.visitInsn(ARETURN);
         }
     }
